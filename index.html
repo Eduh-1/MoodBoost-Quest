@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MoodBoost Quest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    canvas {
+      border-radius: 16px;
+    }
+
+    /* Mobile Controls */
+    .controls {
+      position: fixed;
+      bottom: 20px;
+      display: grid;
+      grid-template-columns: 60px 60px 60px;
+      gap: 8px;
+      z-index: 10;
+    }
+    .btn {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      font-size: 20px;
+      border-radius: 12px;
+      text-align: center;
+      padding: 14px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="controls">
+  <div></div>
+  <div class="btn" id="up">⬆️</div>
+  <div></div>
+  <div class="btn" id="left">⬅️</div>
+  <div class="btn" id="down">⬇️</div>
+  <div class="btn" id="right">➡️</div>
+</div>
+<div id="controls">
+  <button id="left">◀</button>
+  <button id="right">▶</button>
+</div>
+
+<style>
+#controls {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#controls button {
+  font-size: 28px;
+  padding: 14px 24px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.85);
+}
+</style>
+
+<script src="game.js"></script>
+</body>
+</html>
